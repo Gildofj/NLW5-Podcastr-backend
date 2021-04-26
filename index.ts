@@ -21,14 +21,6 @@ mongoose
     app.use(cors);
     app.use(express.json());
 
-    if (process.env.NODE_ENV === "production") {
-      app.use(express.static("dist"));
-
-      app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "dist", "index.js"));
-      });
-    }
-
     const port = process.env.PORT || 3333;
     app.listen(port, () => console.log(`App listening on PORT ${port}`));
   })
