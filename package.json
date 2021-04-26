@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@types/cors": "^2.8.10",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "global": "^4.4.0",
@@ -10,9 +12,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node api/dist/index.js",
+    "build": "tsc -w",
     "test": "echo Teste",
-    "start": "node dist/index.js",
-    "dev": "tsc -w & nodemon dist/index.js"
+    "dev": "tsc -w & nodemon api/dist/index.js"
   },
   "author": "Gildo Junior <1gildojunior@gmail.com>",
   "license": "MIT",
