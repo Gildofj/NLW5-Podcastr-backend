@@ -1,7 +1,0 @@
-{
-    "public": false,
-
-  "rewrites": [
-		{ "source": "/dist(.*)", "destination": "/api" }
-  ]
-}
