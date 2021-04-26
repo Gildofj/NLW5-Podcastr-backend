@@ -10,11 +10,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "vercel": "vercel",
-    "prod": "vercel --prod",
-    "start": "tsc & node dist/index.js",
+    "start": "node dist/index.js",
     "build": "tsc",
-    "dev": "tsc -w & nodemon dist/index.js"
+    "dev": "tsc -w & nodemon dist/index.js",
+    "postinstall": "yarn build"
+    
   },
   "author": "Gildo Junior <1gildojunior@gmail.com>",
   "license": "MIT",
