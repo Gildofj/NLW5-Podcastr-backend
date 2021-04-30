@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import episodes from "./routes/episodes";
+import episodesController from "./controller/EpisodesController";
 
 dotenv.config();
 
@@ -16,7 +16,7 @@ mongoose
   .then(() => {
     console.log("Connected to database!");
     const app = express();
-    app.use("/api", episodes);
+    app.use("/api", episodesController);
     app.use(cors);
     app.use(express.json());
 
